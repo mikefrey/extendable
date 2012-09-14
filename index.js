@@ -5,14 +5,10 @@
 
 var _ = require('underscore')
 
-module.exports = function(ClassDef) {
-  ClassDef.extend = extend
-}
-
 // Helper function to correctly set up the prototype chain, for subclasses.
 // Similar to `goog.inherits`, but uses a hash of prototype properties and
 // class properties to be extended.
-var extend = function(protoProps, staticProps) {
+module.exports = function(protoProps, staticProps) {
   var parent = this;
   var child;
 
